@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "solc-bin",
+  "name": "@eth-optimism/solc-bin",
   "version": "0.0.0",
   "description": "Current and historical (emscripten) binaries for Solidity",
   "dependencies": {
