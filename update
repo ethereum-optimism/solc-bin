@@ -202,6 +202,11 @@ function processDir (dir, options, listCallback) {
         // NOTE: a vs. b (the order is important), because we want oldest first on parsedList.
         // NOTE: If semver considers two versions equal we don't have enough info to say which came earlier
         // so we don't care about their relative order as long as it's deterministic.
+
+        // Handle invalid semver versions such as v0.8.4-broken_alpha
+        if (!semver.valid(a.longVersion)) return 1
+        if (!semver.valid(b.longVersion)) return -1
+
         return semver.compare(a.longVersion, b.longVersion) || (a.longVersion > b.longVersion ? -1 : 1)
       })
 
@@ -338,15 +343,25 @@ DIRS.forEach(function (dir) {
         if (release.prerelease === undefined) {
           // Starting with 0.6.2 we no longer build asm.js releases and the new builds added to bin/ are all wasm.
           if (semver.gt(release.version, '0.6.1')) {
-            updateSymlinkSync(
-              path.join('/wasm', release.path),
-              path.join('..', 'bin', release.path)
-            )
+            try {
+              updateSymlinkSync(
+                path.join('/wasm', release.path),
+                path.join('..', 'bin', release.path)
+              )
+            } catch (e) {
+              console.log(`Ignoring error in updateSymlinkSync for ${release.longVersion}. Full error below`)
+              console.error(e);
+            }
           } else {
-            updateSymlinkSync(
-              path.join('/emscripten-asmjs', 'solc-emscripten-asmjs-v' + release.longVersion + '.js'),
-              path.join('..', 'bin', release.path)
-            )
+            try {
+              updateSymlinkSync(
+                path.join('/emscripten-asmjs', 'solc-emscripten-asmjs-v' + release.longVersion + '.js'),
+                path.join('..', 'bin', release.path)
+              )
+            } catch (e) {
+              console.log(`Ignoring error in updateSymlinkSync for ${release.longVersion}. Full error below`)
+              console.error(e);
+            }
           }
         }
       })
