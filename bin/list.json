@@ -1,0 +1,68 @@
+{
+  "builds": [
+    {
+      "path": "soljson-v0.5.16.js",
+      "version": "0.5.16",
+      "longVersion": "0.5.16",
+      "keccak256": "0x7509528c19dabf1da447416a4dcaf0b9dd06173219c8d866673ccf9beb13c9ed",
+      "sha256": "0xede848a330459d3cad90f2971b217f967955e94cb7cd3116928137c332fb90f1",
+      "urls": [
+        "bzzr://558c148d5733875939cc20a4d516c12a0f631fb70cc4ffa4e9cb44035350038d",
+        "dweb:/ipfs/QmTBt6a2PSih4CXZbh84n9h3h7VKM35imJFqKqkhTYVh9s"
+      ]
+    },
+    {
+      "path": "soljson-v0.6.12.js",
+      "version": "0.6.12",
+      "longVersion": "0.6.12",
+      "keccak256": "0x5bcbda1bc6b8d805743bd05b8a127e7851ec8b8b49ea62004a955cb30d357208",
+      "sha256": "0x8bbddb303e616eb6a4bbc0359a5f9bac6acf2458382059004d767f3c87a701df",
+      "urls": [
+        "bzzr://13b4dea0300b1c7e98ec2e017eca7db8da0b75ec3573c90b3b21670d2f7d2a9e",
+        "dweb:/ipfs/QmcPZH2YBCuUe7KSWVd3aAVLR2SR3icgsUHMh6nEAAquua"
+      ]
+    },
+    {
+      "path": "soljson-v0.7.6+commit.3b061308.js",
+      "version": "0.7.6",
+      "build": "commit.3b061308",
+      "longVersion": "0.7.6+commit.3b061308",
+      "keccak256": "0x4385ab4d58df025c636ddae1d5db13cb3e1f503ec099736e242108fa808a7e8e",
+      "sha256": "0x2a29697e6fad970904d2aa26fd867b6256fee19ec612e2067c90ea0e57ccc2aa",
+      "urls": [
+        "bzzr://1cc7081de7e484e880b08d90a5487947de2d43b2538d4a943b00d7bea5343c62",
+        "dweb:/ipfs/Qmcu5Lr3dmFyASbouc9JyqR2TgEyGtep2Kw8CTKpZoKtce"
+      ]
+    },
+    {
+      "path": "soljson-v0.7.6.js",
+      "version": "0.7.6",
+      "longVersion": "0.7.6",
+      "keccak256": "0x7f7e7e83bca46a4d1eec7bf5b508e8319995f0bc92d4972e9b3ec078f2d84cda",
+      "sha256": "0x32d65a7c922edd03046cc7caba4f4fa3ddcf14793156a787bf8cf7bfab4d1bee",
+      "urls": [
+        "bzzr://f707b24a03a3db2c9f81e74f00c3f3544b081b2c6cd2505af08c8d8a0f11a4e0",
+        "dweb:/ipfs/QmUAqJCnXYvevj3eZfVkhH4tLPyoiPpGUaCNpsAypmoyen"
+      ]
+    },
+    {
+      "path": "soljson-v0.8.4-broken_alpha.js",
+      "version": "0.8.4",
+      "prerelease": "broken_alpha",
+      "longVersion": "0.8.4-broken_alpha",
+      "keccak256": "0x38882a15c932ed895471ce675058a7d42f6c6257c5f948ffef623d0f53accd43",
+      "sha256": "0xdb598b68614eb0b05c90b8d5fb2d56ab6f3f072e8063df769284115c967bfd69",
+      "urls": [
+        "bzzr://22ba7170e729c08d71cfad888dde5223778cabba4ddfe30169cdf689f3a824b6",
+        "dweb:/ipfs/QmZX5UThSoeZMjDGS6PBorzDLD8Wgy8ZHjd32bSoRC9P89"
+      ]
+    }
+  ],
+  "releases": {
+    "0.7.6": "soljson-v0.7.6.js",
+    "0.7.6+commit.3b061308": "soljson-v0.7.6+commit.3b061308.js",
+    "0.6.12": "soljson-v0.6.12.js",
+    "0.5.16": "soljson-v0.5.16.js"
+  },
+  "latestRelease": "0.7.6"
+}
