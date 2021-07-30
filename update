@@ -220,7 +220,10 @@ function processDir (dir, options, listCallback) {
       .slice().reverse()
       .reduce(function (prev, next) {
         if (next.prerelease === undefined) {
-          prev[next.version] = next.path
+          // OVM solc versions are not unique: there are two v0.7.6 versions, so we need to distinguish
+          // them and make sure all show up in the releases section
+          if (next.version === next.longVersion) prev[next.version] = next.path
+          else prev[next.longVersion] = next.path
         }
         return prev
       }, {})
